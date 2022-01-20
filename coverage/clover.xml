@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642670610445" clover="3.2.0">
-  <project timestamp="1642670610446" name="All files">
-    <metrics statements="132" coveredstatements="64" conditionals="80" coveredconditionals="3" methods="60" coveredmethods="7" elements="272" coveredelements="74" complexity="0" loc="132" ncloc="132" packages="28" files="38" classes="38"/>
+<coverage generated="1642671304476" clover="3.2.0">
+  <project timestamp="1642671304476" name="All files">
+    <metrics statements="132" coveredstatements="65" conditionals="80" coveredconditionals="3" methods="60" coveredmethods="8" elements="272" coveredelements="76" complexity="0" loc="132" ncloc="132" packages="28" files="38" classes="38"/>
     <package name="src">
       <metrics statements="5" coveredstatements="3" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="1"/>
       <file name="App.tsx" path="/home/akhipsm/Documents/testing-app/src/App.tsx">
@@ -14,11 +14,11 @@
       </file>
     </package>
     <package name="src.components.atoms.Avatar">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/home/akhipsm/Documents/testing-app/src/components/atoms/Avatar/index.tsx">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.atoms.FocusUnderLine">
