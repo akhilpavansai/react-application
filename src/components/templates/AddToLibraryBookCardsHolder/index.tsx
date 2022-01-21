@@ -5,8 +5,23 @@ import { Heading1 } from '../../atoms/Typography/index.stories';
 import Tp from '../../atoms/Typography/index';
 import ReadingStatus from '../../molecules/ReadingStatus/index';
 
-const Index = ({booksData=[],fontsize='24px',children}:any) => {
-    
+const Index = ({booksData=[],fontsize='24px',numberofbooks="0",children}:any) => {
+    let numbers = []; 
+    let min, max, r, n, p;
+    min = 0;
+    max = 10;
+    r = numberofbooks;
+    for (let i = 0; i < r; i++) {
+    do {
+        n = Math.floor(Math.random() * (max - min + 1)) + min;
+        p = numbers.includes(n);
+        if(!p){
+        numbers.push(n);
+        }
+    }
+    while(p);
+
+    }
     return (
         <>
             <Grid container direction='column' wrap='nowrap' style={{margin:'0 auto',width:"942px",justifyContent:'center'}}>
@@ -35,10 +50,10 @@ const Index = ({booksData=[],fontsize='24px',children}:any) => {
           maxWidth: 942,
           borderRadius: 1,
         }} >
-                {booksData.map((temp: { bookimage: string | number; booktitle: any; authorname: any; minutesread: any; }) => {
-                    
+                {numbers.map((temp: any) => {
+                    let tempbook = booksData[temp];
                     return(<Box style={{marginRight:'30px',marginBottom:'25px'}}>
-                            <AddToLibraryBookCard bookimage={temp.bookimage} cardtitle={temp.booktitle} authorname={temp.authorname} minutesread={temp.minutesread} bgcolor="#E1ECFC"></AddToLibraryBookCard>
+                            <AddToLibraryBookCard bookimage={tempbook.bookimage} cardtitle={tempbook.booktitle} authorname={tempbook.authorname} minutesread={tempbook.minutesread} bgcolor="#E1ECFC"></AddToLibraryBookCard>
                     </Box>)
                     })}
                 </Box>

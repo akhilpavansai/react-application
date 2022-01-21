@@ -37,11 +37,12 @@ const Index = ({booksData=[],statusbar='True',fontsize='24px',children}:any) => 
           maxWidth: 942,
           borderRadius: 1,
         }} >
-                {booksData.map((temp: { bookimage: string | number; booktitle: any; authorname: any; minutesread: any; }) => {
-                    
-                    return(<Box style={{marginRight:'30px',marginBottom:'25px'}}>
+            {/* { bookimage: string | number; booktitle: any; authorname: any; minutesread: any; } */}
+                {booksData.map((temp:any ) => {
+                    if(temp.status==="finished")
+                    {return(<Box style={{marginRight:'30px',marginBottom:'25px'}}>
                             <FinishedReadingCard bookimage={temp.bookimage} cardtitle={temp.booktitle} authorname={temp.authorname} minutesread={temp.minutesread} bgcolor="#E1ECFC"></FinishedReadingCard>
-                    </Box>)
+                    </Box>)}
                     })}
                 </Box>
 

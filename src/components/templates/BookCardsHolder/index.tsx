@@ -35,14 +35,15 @@ const index = ({booksData=[],bookImagesData=[],statusbar='True',fontsize='24px',
                 <Box display='flex' sx={{
           display: 'flex',
           flexWrap: 'wrap',
+          width:'942px',
           maxWidth: 942,
           borderRadius: 1,
         }} >
-                {booksData.map((temp: { bookimage: string | number; booktitle: any; authorname: any; minutesread: any; }) => {
-                    
-                    return(<Box style={{marginRight:'30px',marginBottom:'25px'}}>
+                {booksData.map((temp:any) => {
+                    if(temp.status==="reading")
+                    {return(<Box style={{marginRight:'30px',marginBottom:'25px'}}>
                             <BookCard bookimage={temp.bookimage} cardtitle={temp.booktitle} authorname={temp.authorname} minutesread={temp.minutesread} bgcolor="#E1ECFC"></BookCard>
-                    </Box>)
+                    </Box>)}
                     })}
                 </Box>
 

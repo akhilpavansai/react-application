@@ -5,7 +5,7 @@ import { DefaultFooter } from '../../components/organisms/Footer/index.stories'
 import { DefaultHeader } from '../../components/organisms/Header/index.stories'
 import Tp from '../../components/atoms/Typography/index';
 import { useParams } from 'react-router-dom'
-import { allBooksDetails } from '../../data/Data'
+import { booksData } from '../../data/Data'
 
 const Index = (props:any) => {
     const { id } = useParams();
@@ -14,7 +14,7 @@ const Index = (props:any) => {
     {
         str=id+" 2.0";
     }
-    const v = allBooksDetails.find(temp => temp.booktitle==id);
+    const v = booksData.find(temp => temp.booktitle==id);
     
     return (
         <>

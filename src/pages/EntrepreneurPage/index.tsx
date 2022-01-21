@@ -6,7 +6,7 @@ import { DefaultFooter } from '../../components/organisms/Footer/index.stories'
 import { DefaultHeader } from '../../components/organisms/Header/index.stories'
 import { DefaultExplorePoster } from '../../components/molecules/ExplorePoster/index.stories'
 import { DefaultSearchBar } from '../../components/organisms/SearchBar/index.stories'
-import { trendingBlinksData,justAddedBlinksData,featuredAudioBlinksData } from '../../data/Data'
+import { booksData } from '../../data/Data'
 
 const index = () => {
     
@@ -23,10 +23,10 @@ const index = () => {
                     <DefaultSearchBar/>
                 </Grid>
             </Grid>
-            <AddToLibraryBookCardsHolder booksData={trendingBlinksData}  statusbar='False'>Trending Blinks</AddToLibraryBookCardsHolder>
-            <AddToLibraryBookCardsHolder booksData={justAddedBlinksData}  statusbar='False'>Just added</AddToLibraryBookCardsHolder>
+            <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="6" statusbar='False'>Trending Blinks</AddToLibraryBookCardsHolder>
+            <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="3" statusbar='False'>Just added</AddToLibraryBookCardsHolder>
             <div style={{marginBottom:'76px'}}>
-            <AddToLibraryBookCardsHolder booksData={featuredAudioBlinksData}  statusbar='False'>Featured audio blinks</AddToLibraryBookCardsHolder>
+            <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="3" statusbar='False'>Featured audio blinks</AddToLibraryBookCardsHolder>
             </div>
             </div>
         {/* </Paper> */}

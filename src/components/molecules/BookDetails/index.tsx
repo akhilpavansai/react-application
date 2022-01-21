@@ -5,7 +5,7 @@ import Tp from '../../atoms/Typography/index';
 import { DefaultIconWithText } from '../IconWithText/index.stories';
 import { DefaultBookDetails } from './index.stories';
 import RightArrowIcon from '../../../assets/icons/rightarrow.png';
-import { currentlyReadingBooksData, finishedBooksData } from '../../../data/Data';
+import { booksData } from '../../../data/Data';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -38,11 +38,9 @@ const Index = (book:{booktitle:string,authorname:string,bookimage:string,synopsi
 
 
     const handleFinish = (bookname: string) => {
-        let deletingBook = currentlyReadingBooksData.find(e=>e.booktitle===bookname);
-        let deletingIndex = currentlyReadingBooksData.findIndex(i => i.booktitle === bookname);
-        currentlyReadingBooksData.splice(deletingIndex,1);
-        finishedBooksData.push({ bookimage: deletingBook?deletingBook.bookimage:'', booktitle: deletingBook?deletingBook.booktitle:'', authorname: deletingBook?deletingBook.authorname:'', minutesread: deletingBook?deletingBook.minutesread:'', users: deletingBook?deletingBook.users:'', synopsis: deletingBook?deletingBook.synopsis:'' });
-        
+        let deletingBook = booksData.find(e=>e.booktitle===bookname);
+        let ifBookNotExsist;
+        deletingBook?(deletingBook.status = "finished"):(ifBookNotExsist=true);
     }
 
     console.log("received book in book detials is : "+book.booktitle+" "+book.authorname);
