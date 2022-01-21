@@ -12,26 +12,19 @@ import EatBetterFeelBetterCover from '../assets/bookcovers/eatbetterfeelbetter.p
 import DropShippingCover from '../assets/bookcovers/dropshipping.png';
 
 
-var finishedBooksData: { bookimage: string; booktitle: string; authorname: string; minutesread: string; users: string; synopsis: string; }[] = [
-    // {
-    //     bookimage:BeyondEntrepreneurshipCover,
-    //     booktitle:'Beyond Entrepreneurship 2.0',
-    //     authorname:'Jim Collins & Bill Lazier',
-    //     minutesread:'13-minute read',
-    //     users:'',
-    //     synopsis:'Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.'
-    // },
-]
+// var finishedBooksData: { bookimage: string; booktitle: string; authorname: string; minutesread: string; users: string; synopsis: string; }[] = [
+   
+// ]
 
 
-var currentlyReadingBooksData = [
+var booksData = [
     {
         bookimage:BringYourHumanToWorkCover,
         booktitle:'Bring Your Human To Work',
         authorname:'Erica Keswin',
         minutesread:'13-minute read',
         users:'',
-        synopsis:'Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.'
+        synopsis:'Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.',
     },
     {
         bookimage:EmployeeToEntrepreneurCover,
@@ -324,4 +317,4 @@ var currentlyReadingBooksData = [
 
         ]        
 
-export {currentlyReadingBooksData,trendingBlinksData,justAddedBlinksData,featuredAudioBlinksData,finishedBooksData,allBooksDetails}
+export {booksData,trendingBlinksData,justAddedBlinksData,featuredAudioBlinksData,allBooksDetails}
