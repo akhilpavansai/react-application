@@ -1,4 +1,4 @@
-import { Box, Button, ButtonBase,Grid, Icon, makeStyles } from '@material-ui/core'
+import { Box, Button, ButtonBase,Grid, makeStyles } from '@material-ui/core'
 import IconWithText from '../../molecules/IconWithText/index';
 import PoliticsIcon from '../../../assets/exploreicons/politics.png';
 import EntrepreneurshipIcon from '../../../assets/exploreicons/entrepreneurship.png';
@@ -20,11 +20,10 @@ import CarrerAndSuccessIcon from '../../../assets/exploreicons/careerandsuccess.
 import EducationIcon from '../../../assets/exploreicons/education.png';
 import Tp from '../../atoms/Typography/index';
 import IconB from '../../atoms/IconButton/index';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
-const index = ({check=false}:any) => {
-
+const index = () => {
     const exploreHeaderStyles = {
             display: 'inline',
             fontWeight: 700,
@@ -57,13 +56,9 @@ const index = ({check=false}:any) => {
                 }
             },
             elementscontainer:{
-                // height: "20px",
-                // width: "940px",
                 width: "880px",
                 marginLeft: "250px",
                 marginTop: "30px",
-                // display: 'flex',
-                // justifyContent:'space-between'
             },
             row: {
                 marginTop:'28px'
@@ -76,7 +71,6 @@ const index = ({check=false}:any) => {
 
     return (
         <>
-        {/* position:'absolute',top:'86.1px',zIndex:2 id='exploremodel'*/}
             <Box style={{width:'1440px',height:'398px',background: "#F1F6F4"}} >
                 <div style={{height: "20px",width: "723px",marginLeft:'250px',paddingTop: '30px',display: 'flex',justifyContent:'space-between'}}>
                     <ButtonBase>
@@ -108,7 +102,6 @@ const index = ({check=false}:any) => {
                     <Grid item container direction='column'>
                         <Grid item  >
                             <Link to="/entrepreneurshippage" style={{textDecoration:'none'}}>
-                                {/* <IconWithText icon={EntrepreneurshipIcon} iconwidth="16px" iconheight="22.05px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 12px",color:'#0365F2',lineHeight:'20.11px'}}}>Entrepreneurship</IconWithText> */}
                                 <Button variant="text" className={classes.button} startIcon={<IconB iconwidth="16px" iconheight="22.05" icon={EntrepreneurshipIcon}></IconB>}>
                                     Entrepreneurship
                                 </Button>
@@ -172,91 +165,9 @@ const index = ({check=false}:any) => {
                             <IconWithText icon={EducationIcon} iconwidth="22px" iconheight="18px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 9px",color:'#6D787E',lineHeight:'20.11px'}}}>Education</IconWithText>
                         </Grid>
                     </Grid>
+
                 </Grid>
-
-
-
-
-
-
-{/*                 
-                <Grid container className={classes.row} >
-                    <Grid item >
-                    <IconWithText icon={EntrepreneurshipIcon} iconwidth="16px" iconheight="22.05px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 12px"}}}>13-minute read</IconWithText>
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={PoliticsIcon} iconwidth="20px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 10px"}}}>Politics</IconWithText>
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={MarketingAndSalesIcon} iconwidth="18.71px" iconheight="18px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 10.29px"}}}>Marketing & Sales</IconWithText>
-                    </Grid>
-                </Grid>
-
-                
-               <Grid container className={classes.row} style={{paddingTop:'28px'}}>
-                    <Grid item >
-                        <IconWithText icon={ScienceIcon} iconwidth="16.31px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 11.48px"}}}>Science</IconWithText>
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={HealthAndNutritionIcon} iconwidth="22px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 9px"}}}>Health & Nutrition</IconWithText>                  
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={PersonalDevelopmentIcon} iconwidth="17px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 11px"}}}>Personal Development</IconWithText>
-                    </Grid>
-                </Grid>
-
- 
-                <Grid container className={classes.row} style={{paddingTop:'38px'}} >
-                    <Grid item >
-                        <IconWithText icon={EconomicsIcon} iconwidth="18.68px" iconheight="21.68px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 10px"}}}>Economics</IconWithText>
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={HistoryIcon} iconwidth="22px" iconheight="18px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 9px"}}}>History</IconWithText>                
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={CommunicationSKillsIcon} iconwidth="20px" iconheight="18px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 10px"}}}>Communication Skills</IconWithText>
-                    </Grid>
-                </Grid>
-                
-
-                <Grid container className={classes.row} style={{paddingTop:'38px'}}>
-                    <Grid item >
-                        <IconWithText icon={CorporateCultureIcon} iconwidth="20px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 11.48px"}}}>Coporate Culture</IconWithText>
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={MotivationAndInspirationIcon} iconwidth="16px" iconheight="21px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 11.48px"}}}>Motivation & Inspiration</IconWithText>                   
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={MoneyAndInvestmentsIcon} iconwidth="21px" iconheight="18px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 11.48px"}}}>Money & Investments</IconWithText>
-                    </Grid>
-                </Grid>
-
-                <Grid container className={classes.row} style={{paddingTop:'38px'}}>
-                    <Grid item >
-                        <IconWithText icon={PsychologyIcon} iconwidth="18.27px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 10.73px"}}}>Psychology</IconWithText>
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={ProductivityIcon} iconwidth="12px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 14px"}}}>Productivity</IconWithText>                
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={SexAndRelationshipIcon} iconwidth="22.5px" iconheight="18.5px" typr='body2' customstyle={{tp:{padding:"0px 0px 0px 8.5px"}}}>Sex & Relationship</IconWithText>
-                    </Grid>
-                </Grid>
-
-                <Grid container className={classes.row} style={{paddingTop:'38px'}}>
-                    <Grid item >
-                        <IconWithText icon={NatureAndEnvironmentIcon} iconwidth="18px" iconheight="19px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 11px"}}}>Nature & Environment</IconWithText>
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={CarrerAndSuccessIcon} iconwidth="20px" iconheight="20px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 10px"}}}>Carrer & Success</IconWithText>                
-                    </Grid>
-                    <Grid item >
-                        <IconWithText icon={EducationIcon} iconwidth="22px" iconheight="18px" type='body2' customstyle={{tp:{padding:"0px 0px 0px 9px"}}}>Education</IconWithText>
-                    </Grid>
-                </Grid> */}
-
             </Box>
-            
         </>
     )
 }

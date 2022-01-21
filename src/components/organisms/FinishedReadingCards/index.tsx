@@ -1,11 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Button, ButtonBase, Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import { Box, Button, Card, CardContent, CardMedia } from '@material-ui/core';
 import Tp from '../../atoms/Typography/index';
 import IconWithText from '../../molecules/IconWithText/index';
 import ClockIcon from '../../../assets/icons/clockread.jpg';
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import AddIcon from '@mui/icons-material/Add';
 
 
 const bookCardStyles = makeStyles({
@@ -48,17 +45,8 @@ const bookCardStyles = makeStyles({
 });
 
 const Index = (props:any) => {
-
-    const [over,setOver] = useState(true);
-    function changeBackground(e:any) {
-            setOver(!over);
-      }
-    
-      function changeBackgroundBack(e:any) {
-            setOver(!over)
-      }
     const classes= bookCardStyles();
-    if(props.cardtitle=="")
+    if(props.cardtitle==="")
     {
         return <span></span>
     }
@@ -78,10 +66,6 @@ const Index = (props:any) => {
                         {props.authorname}
                     </Tp>
                     <IconWithText icon={ClockIcon} iconwidth="16.67px" iconheight="16.67px" type='caption' customstyle={{ tp:{padding:"0px 0px 0px 5.67px",color:"#6D787E"},iconbutton:{paddingLeft:"16px"} }}>{props.minutesread}</IconWithText>
-                    {/* <Link to={`/bookdetails/${props.cardtitle}`}>
-                    <IconButton iconwidth="18px" iconheight="4px" icon={MoreIcon} customstyle={{margin:"21px 29px 22px 0px", float:"right"}}></IconButton>
-                    </Link> */}
-                    {/* {/* <Box className={classes.bottombox1} bgcolor="#E1ECFC"></Box> */}
                     <Button className={classes.buttonlib} variant="text">
                         Read again
                     </Button>

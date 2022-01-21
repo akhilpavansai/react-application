@@ -1,4 +1,3 @@
-import { Box } from '@material-ui/core'
 import React from 'react'
 import AvatarIcon from '../../atoms/Avatar/index';
 import CustomIconButton from '../../atoms/IconButton/index';

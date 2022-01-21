@@ -1,19 +1,12 @@
-import { ButtonBase, Grid, makeStyles } from '@material-ui/core'
-import { useState} from 'react'
+import React from 'react'
+import { Grid, makeStyles } from '@material-ui/core'
 import { CustomIconButton } from '../../atoms/IconButton/index.stories'
 import { DefaultLogoButton } from '../../atoms/LogoButton/index.stories'
 import { Body1 } from '../../atoms/Typography/index.stories'
 import { CustomAvatarWithIcon } from '../../molecules/AvatarWithIcon/index.stories'
-import { DefaultTextWithIcon } from '../../molecules/TextWithIcon/index.stories'
-import  ExploreMenu  from '../ExploreMenu/index'
 import ExploreButton from '../ExploreButton/index';
 
 const Index = (props:any) => {
-    // var [exploreOpen, setExploreOpen] = useState(false);
-
-    // const exploreHandling = () => {
-    //     setExploreOpen(!exploreOpen);
-    // }
 
     const headerStyles = makeStyles({
         headercontainer: {
@@ -47,7 +40,6 @@ const Index = (props:any) => {
                     <CustomAvatarWithIcon/>
                 </Grid>
             </Grid>
-            {/* <ExploreMenu check={exploreOpen}/> */}
         </>
     )
 }

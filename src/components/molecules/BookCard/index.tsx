@@ -5,7 +5,6 @@ import IconWithText from '../IconWithText/index';
 import ClockIcon from '../../../assets/icons/clockread.jpg';
 import CustomIconButton from "../../atoms/IconButton/index";
 import MoreIcon from '../../../assets/icons/more.jpg';
-import { Link } from "react-router-dom";
 
 
 

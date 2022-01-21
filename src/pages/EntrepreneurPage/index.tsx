@@ -13,24 +13,21 @@ const index = () => {
 
     return (
         <>
-        {/* <Paper style={{margin:'0px auto',width:'1440px'}}> */}
-        <div style={{display:'flex',justifyContent:'center',flexDirection:'column',width:'1440px'}}>
-            <Grid container style={{justifyContent:'center',marginTop:'32px',marginBottom:'80px'}}>
-                <Grid item>
-                    <DefaultExplorePoster />
+            <div style={{display:'flex',justifyContent:'center',flexDirection:'column',width:'1440px'}}>
+                <Grid container style={{justifyContent:'center',marginTop:'32px',marginBottom:'80px'}}>
+                    <Grid item>
+                        <DefaultExplorePoster />
+                    </Grid>
+                    <Grid item style={{width:'912px',marginTop:'58px'}}>
+                        <DefaultSearchBar/>
+                    </Grid>
                 </Grid>
-                <Grid item style={{width:'912px',marginTop:'58px'}}>
-                    <DefaultSearchBar/>
-                </Grid>
-            </Grid>
-            <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="6" statusbar='False'>Trending Blinks</AddToLibraryBookCardsHolder>
-            <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="3" statusbar='False'>Just added</AddToLibraryBookCardsHolder>
-            <div style={{marginBottom:'76px'}}>
-            <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="3" statusbar='False'>Featured audio blinks</AddToLibraryBookCardsHolder>
+                <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="6" statusbar='False'>Trending Blinks</AddToLibraryBookCardsHolder>
+                <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="3" statusbar='False'>Just added</AddToLibraryBookCardsHolder>
+                <div style={{marginBottom:'76px'}}>
+                    <AddToLibraryBookCardsHolder booksData={booksData} numberofbooks="3" statusbar='False'>Featured audio blinks</AddToLibraryBookCardsHolder>
+                </div>
             </div>
-            </div>
-        {/* </Paper> */}
-            
         </>
     )
 }
